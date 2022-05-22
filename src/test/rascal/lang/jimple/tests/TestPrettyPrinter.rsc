@@ -19,6 +19,11 @@ test bool testField() {
 	return true;	
 }
 
+test bool myTest() {
+	loc demo = |project://JimpleFramework/target/classes/demo/Vanilla.class|;
+	writeFile(|file:///tmp/vanilla_decompile.jimple|, prettyPrint(decompile(demo)));
+}
+
 test bool testClassDecl() {
 	
 	f1 = field([Public()], TBoolean(), "flag");			
